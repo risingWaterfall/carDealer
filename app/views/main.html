@@ -1,23 +1,37 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="container-fluid">
+  <div class="col-md-4">
+      <h1>Stress tested vehicles</h1>
+      <br>
+      <p>Chrome shrine neon stimulate-ware concrete BASE jump cardboard. Claymore mine table wristwatch sunglasses chrome man sprawl faded pen city rifle physical bridge. Soul-delay boat neural footage woman silent systema engine nodality chrome youtube. Saturation point bomb render-farm construct silent 3D-printed advert sub-orbital numinous 8-bit. Futurity beef noodles physical film savant warehouse city katana hacker silent corporation tanto car. </p>
+
+  </div>
+  <div class="col-md-4">
+    <h1>European Standards</h1>
+    <br>
+    <p>Tube math-carbon saturation point sub-orbital pistol bomb computer euro-pop nodal point bicycle Tokyo systemic disposable cyber. Order-flow uplink vehicle sunglasses drugs cyber-weathered camera euro-pop lights Legba assault boy. Long-chain hydrocarbons industrial grade BASE jump camera wristwatch drone alcohol dolphin. Crypto-corrupted fetishism towards hotdog j-pop engine-space boat pistol voodoo god soul-delay face forwards table katana-ware cyber.  </p>
+  </div>
+  <div class="col-md-4">
+    <h1>Unbeatable Prices</h1>
+    <br>
+    <p>Tank-traps denim sensory drugs boy alcohol pre-cyber-bicycle chrome. Knife urban sentient dome computer artisanal long-chain hydrocarbons voodoo god tanto. Uplink Tokyo modem dead post-lights semiotics jeans stimulate bridge paranoid katana math. Beef noodles Legba modem paranoid smart-Shibuya savant bicycle physical. Chiba long-chain hydrocarbons smart-girl digital Shibuya numinous silent industrial grade boat chrome DIY assassin uplink motion. Cardboard faded 8-bit franchise dissident man math-market footage boat tube military-grade semiotics engine. Tiger-team spook grenade beef noodles refrigerator numinous apophenia tower claymore mine tattoo futurity neon rifle meta-construct office. </p>
+    <br><br>
+
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+<div class="row" ng-controller="MainCtrl">
+  <div class="col-sm-6 col-md-4" ng-repeat="car in cars">
+    <div class="thumbnail" >
+      <img ng-src="{{car.img.thumb}}" alt="...">
+      <div class="caption">
+        <h3>{{ car.make }} - {{car.model}} </h3>
+        <h3>{{car.price | currency:undefined:0}}</h3>
+        <p>{{car.about}}}</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+
 </div>

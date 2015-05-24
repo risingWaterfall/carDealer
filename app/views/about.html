@@ -1,1 +1,11 @@
-<p>This is the about view.</p>
+<div ng-controller="ListCtrl">
+        <div class="cars" ng-repeat="car in cars">
+            <h1>{{car.make}} {{car.model}} {{car.year}}</h1>
+            <h3> Price : {{car.price | currency}}</h3>
+            <p class="clearfix"></p>
+            <img ng-src="{{car.img}}">
+            <p>{{car.about}}</p>
+
+            
+        </div>
+    </div>

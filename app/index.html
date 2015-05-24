@@ -52,18 +52,14 @@
           <h2>We provide quality machines at excellent prices!</h2>
           <p id="landing-button"><a class="btn btn-success btn-lg" href="#" role="button">Learn more</a></p>
       </div>
-    <div ng-controller="ListCtrl">
-        <div class="cars" ng-repeat="car in cars">
-            <h1>{{car.make}} {{car.model}} {{car.year}}</h1>
-            <h3> Price : {{car.price | currency}}</h3>
-            <p class="clearfix"></p>
-            <img ng-src="{{car.img}}">
-            <p>{{car.about}}</p>
+      </div>
 
-            
-        </div>
+<!-- Begins the view -->
+
+  <div class="container-fluid" ng-view>
+    
     </div>
-    </div>
+<!-- Ends the view -->
 
     <div class="footer">
       <div class="container">
@@ -105,4 +101,11 @@
 
         <!-- endbuild -->
 </body>
+
+<!-- TODO: Car limit and paging.
+           Respective Tests.
+
+
+           Car list page route.
+         -->
 </html>
