@@ -102,7 +102,7 @@ body {
     float: left;
   }
   img {
-    width: 500px;
+    max-height:400px;
     padding-left: 15px;
   }
   h3 {
@@ -144,3 +144,31 @@ max-height:100%;
 background-size:cover;
 
 }
+
+.makeNmodel {
+text-align: center;
+padding: 10px 0px;
+
+}
+
+.info {
+  font-weight: bold;
+
+}
+
+
+#hightlights {
+display: block;
+
+}
+#card {
+transition-property: background;
+transition-duration: 1s;
+transition-timing-function: linear;
+}
+
+#card:hover {
+ box-shadow: 0px 0px 2px 1px #2980b9;
+ transition: all 0.3s linear;
+}
+

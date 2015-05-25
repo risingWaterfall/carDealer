@@ -19,16 +19,46 @@
 </div>
 
 
-<div class="row" ng-controller="MainCtrl">
-  <div class="col-sm-6 col-md-4" ng-repeat="car in cars">
-    <div class="thumbnail" >
+<div class="row" ng-controller="MainCtrl" ng-repeat="cars in splitCars">
+  <div class="col-sm-6 col-md-4" ng-repeat="car in cars" id="hightlights">
+    <div class="thumbnail" id="card">
+      <a href="#/about/{{car.id}}">
       <img ng-src="{{car.img.thumb}}" alt="...">
       <div class="caption">
-        <h3>{{ car.make }} - {{car.model}} </h3>
-        <h3>{{car.price | currency:undefined:0}}</h3>
-        <p>{{car.about}}}</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        <div class="row">
+          <div class="col-sm-12 col-md-12" >
+            <h3 class="makeNmodel">{{ car.make }} - {{car.model}}</h3>
+        </div>
+        </div>
+        
+
+
+        <div class="row">
+           <div class="col-sm-6  col-md-6">
+             <p class="info">CC: {{car.engine}}</p>
+            </div>
+            <div class="col-sm-6  col-md-6">
+              <p class="info">Year: {{car.year}}</p>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-sm-6  col-md-6">
+            <p class="info">Gear: {{car.gear[0] | uppercase}}{{car.gear.substring(1)}}</p>
+        </div>
+          
+          <div class="col-sm-6  col-md-6">
+          <p class="info">Drive: {{car.drive}}</p>
+          </div>
+          
+        </div>
+
+          <div class="row">
+          <div class="col-sm-12 col-md-12">
+              <h4 class="makeNmodel"> Price: {{car.price | currency:undefined:0}}</h4>
+          </div>            
+        </div>
       </div>
+      </a>
     </div>
   </div>
 </div>

@@ -1,9 +1,9 @@
-<div ng-controller="ListCtrl">
+<div ng-controller="AboutCtrl">
         <div class="cars" ng-repeat="car in cars">
             <h1>{{car.make}} {{car.model}} {{car.year}}</h1>
             <h3> Price : {{car.price | currency}}</h3>
             <p class="clearfix"></p>
-            <img ng-src="{{car.img}}">
+            <img ng-src="{{car.img.full}}">
             <p>{{car.about}}</p>
 
             

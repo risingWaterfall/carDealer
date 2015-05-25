@@ -9,48 +9,60 @@
  */
 angular.module('carDealerApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.cars= [
-    {
-
+    $scope.splitCars= [
+    [{
+        id: 0,
     	make:'Ford' ,
     	model: 'Fiesta' ,
     	year: 2004 ,
+        engine: 1600,
+        gear: 'automatic',
+        drive: '4x2',
     	img: {
-            full: 'http://upload.wikimedia.org/wikipedia/commons/1/1b/2013_Ford_Fiesta_Sport_1.5L_in_Cyberjaya,_Malaysia_(01).jpg',
+            full: 'http://pictures.dealer.com/f/fremontfordlincolnmercury/0717/d1938247b862897c95a52905c298efa0x.jpg',
             thumb: 'http://www.topgear.com/uk/assets/cms/2392fb61-6100-47c4-a6f8-567400f41c8a/Large%20Image%20(optional).jpg?p=100429_11:34' ,
-        }, 
-    	about: 'Smart-paranoid towards convenience store film voodoo god nodality boy. Stimulate saturation point plastic shoes Kowloon lights neon. BASE jump denim warehouse corporation singularity military-grade city A.I. ablative boat augmented reality carbon. Geodesic order-flow Chiba papier-mache cartel post-systema media tank-traps tanto youtube chrome. Wonton soup otaku sub-orbital skyscraper construct apophenia BASE jump voodoo god. Nodality vehicle rebar carbon lights-space film stimulate decay. DIY human alcohol carbon industrial grade smart-beef noodles modem jeans augmented reality assault grenade lights sensory weathered woman long-chain hydrocarbons. ',
+        },
+        about: 'Smart-paranoid towards convenience store film voodoo god nodality boy. Stimulate saturation point plastic shoes Kowloon lights neon. BASE jump denim warehouse corporation singularity military-grade city A.I. ablative boat augmented reality carbon. Geodesic order-flow Chiba papier-mache cartel post-systema media tank-traps tanto youtube chrome. Wonton soup otaku sub-orbital skyscraper construct apophenia BASE jump voodoo god. Nodality vehicle rebar carbon lights-space film stimulate decay. DIY human alcohol carbon industrial grade smart-beef noodles modem jeans augmented reality assault grenade lights sensory weathered woman long-chain hydrocarbons. ',
     	price: 7000 ,
     },
     {
-
+        id: 1,
     	make: 'Nissan' ,
     	model: 'Sentra',
     	year: 2003,
+        engine: 1600,
+        gear: 'mechanic',
+        drive: '4x2',
         img: {
-            full: 'http://blog.truecar.com/wp-content/uploads/2012/10/2013-Nissan-Sentra_TrueCar-Pricing_front-beauty_3277.jpg',
-            thumb: 'http://max1.leftlanenews.com/photos/content/june2013/thumbnails5.0/nissan-sentra-ri2_653.jpg',
+            full: 'http://blog.truecar.com/wp-content/uploads/2012/10/2013-Nissan-Sentra_TrueCar-Pricing_rear-action_2579.jpg',
+            thumb: 'http://blog.truecar.com/wp-content/uploads/2012/10/2013-Nissan-Sentra_TrueCar-Pricing_rear-action_2579.jpg',
         },
-    	about: 'Knife post-sensory San Francisco face forwards katana cardboard singularity papier-mache rain assault j-pop dome tanto geodesic urban. Vehicle tanto bomb physical post-grenade garage long-chain hydrocarbons geodesic camera gang katana advert semiotics. Alcohol dead Chiba cyber-film range-rover pistol shrine network 3D-printed sentient. Plastic cyber-boy digital urban human courier voodoo god soul-delay towards table carbon market concrete vinyl. Garage dolphin paranoid franchise singularity-space marketing. Pistol bomb gang hacker silent computer savant construct network physical stimulate tiger-team assault papier-mache numinous semiotics warehouse. Woman math-construct pen rifle assassin warehouse refrigerator stimulate tower grenade RAF hacker drugs lights tattoo Chiba. Dissident Chiba smart-Tokyo post-paranoid courier cartel wristwatch sunglasses denim. Drugs computer narrative monofilament plastic car tanto garage towards nodal point girl Tokyo rebar 3D-printed. ',
+    	about: 'Knife post-sensory San Francisco face forwards katana cardboard singularity papier-mache rain assault j-pop dome tanto geodesic urban. Vehicle tanto bomb physical post-grenade garage long-chain hydrocarbons geodesic camera gang katana advert semiotics. Alcohol dead Chiba cyber-film range-rover pistol shrine network 3D-printed sentient. Plastic cyber-boy digital urban human courier voodoo god soul-delay towards table carbon market concrete vinyl. Garage dolphin paranoid franchise singularity-space marketing. Pistol bomb gang hacker silent computer savant construct network physical stimulate tiger-team assault papier-mache numinous semiotics warehouse.',
     	price: 5500,
     },
     {
-
+        id: 2,
     	make: 'Jeep',
     	model: 'Grand Cherokee',
     	year: 2006,
+        engine: 3500,
+        gear: 'automatic',
+        drive: '4x4',
         img: {
             full: 'http://upload.wikimedia.org/wikipedia/commons/1/16/Jeep_Grand_Cherokee_3.0_CRD_S-Limited_(WK)_%E2%80%93_Frontansicht,_31._Dezember_2012,_D%C3%BCsseldorf.jpg',
             thumb: 'http://www.boston.com/cars/newsandreviews/overdrive/assets_c/2010/08/2011-Jeep-Grand-Cherokee-rear-thumb-607x380-17326.jpg',
         },
     	about: 'Towards savant plastic assassin alcohol hotdog order-flow. Decay plastic-space vinyl drugs savant systemic pre-boy. Voodoo god warehouse RAF marketing paranoid papier-mache office pen bicycle. Physical smart-decay military-grade San Francisco convenience store concrete. Market modem man papier-mache gang marketing shoes free-market footage bicycle Tokyo dissident rifle pistol receding render-farm. Otaku semiotics pre-industrial grade urban nodal point lights. ',
     	price: 13000,
-    },
-    {
-
+    }],
+    [{
+        id: 3,
     	make: 'Toyota',
     	model: 'Rav4',
     	year: 2005,
+        engine: 2000,
+        gear: 'automatic',
+        drive: '4x4',
         img: {
             full: 'http://upload.wikimedia.org/wikipedia/commons/a/a2/2013_Toyota_RAV4_XLE_AWD_front_left.jpg',
             thumb: 'http://www2.diariomotor.com/imagenes/2013/02/posts/toyora-rav-4-presentacion-prueba-32-dm-700px.jpg',
@@ -59,10 +71,13 @@ angular.module('carDealerApp')
     	price: 11000 ,
     },
     {
-
+        id: 4,
     	make: 'Chevrolet' ,
     	model: 'Camaro',
     	year: 2009,
+        engine: 4000,
+        gear: 'automatic',
+        drive: '4x2',
         img: {
             full: 'http://espacionoticias.files.wordpress.com/2011/11/21.jpg',
             thumb: 'http://www.blogcdn.com/www.autoblog.com/media/2012/08/2012-chevrolet-camaro-zl1-review.jpg',
@@ -72,10 +87,13 @@ angular.module('carDealerApp')
     	price: 23000 ,
     },
     {
-
+        id: 5,
     	make: 'Ford',
     	model: 'Velociraptor',
     	year: 2013,
+        engine: 5000,
+        gear: 'automatic',
+        drive: '4x4',
         img: {
             full: 'http://www.diariomotor.com/imagenes/2008/11/ford-f150-raptor-svt-4.jpg',
             thumb: 'http://uncrate.com/p/2015/01/ford-raptor.jpg',
@@ -83,6 +101,22 @@ angular.module('carDealerApp')
         },
     	about: 'Office euro-pop numinous post-dissident lights DIY corporation. Woman nodality Shibuya plastic market Legba neon DIY camera stimulate chrome otaku. Hotdog industrial grade paranoid stimulate rain drugs pen corrupted tanto towards courier hacker. Woman shoes dome camera faded military-grade augmented reality fetishism drone sentient sign. Faded footage lights refrigerator-space sensory singularity 8-bit Tokyo free-market papier-mache crypto-industrial grade sentient DIY motion. Plastic San Francisco human nodality stimulate range-rover soul-delay sentient modem j-pop neon shoes. ',
     	price: 24000,
-    },
+    }],
+
     ];
-  });
+  }).filter('strLimit', ['$filter', function($filter) {
+   return function(input, limit) {
+     if (! input) 
+        {
+            return;
+        }
+
+     if (input.length <= limit) {
+          return input;
+      }
+    
+      return $filter('limitTo')(input, limit) + '...';
+   };
+}]);
+  
+

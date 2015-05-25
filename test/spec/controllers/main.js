@@ -16,7 +16,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should give an array listing 3 cars', function () {
+    expect(scope.splitCars.length).toBe(2);
   });
 });
